@@ -11,17 +11,19 @@
   <header>
     <h1>Analizador de texto</h1>
   </header>
-  <textarea name="user-input">
+  <!-- <div class="container"> -->
+  <textarea name="user-input" placeholder="Escribe aquí...">
   </textarea>
   <ul>
-    <li>Palabras:</li>
-    <li>Caracteres:</li>
-    <li>Caracteres sin espacio ni signos de puntuación:</li>
-    <li>Números:</li>
-    <li>Suma de números:</li>
-    <li>Longitud media de las palabras:</li>
+    <li class="metricas">Palabras:</li>
+    <li class="metricas">Caracteres:</li>
+    <li class="metricas">Caracteres sin espacio ni signos de puntuación:</li>
+    <li class="metricas">Números:</li>
+    <li class="metricas">Suma de números:</li>
+    <li class="metricas">Longitud media de las palabras:</li>
   </ul>
-  <button id="rest-button">Limpiar</button>
+<!-- </div> -->
+  <button id="reset-button" onclick="resetText()">Limpiar</button>
   <footer>
     <p>Alejandra García Lara</p>
   </footer>
