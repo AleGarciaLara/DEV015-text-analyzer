@@ -40,6 +40,7 @@ textarea[name="user-input"]{
     background-color: #212E36;
     min-height: 350px;
     min-width: 350px;
+    color: #EFF3F5;
 }
 
 #reset-button {
