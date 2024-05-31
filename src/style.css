@@ -13,6 +13,7 @@
     background-color:#192229;
     font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color:#C8CDD0;
+    align-items: center;
 }
 
 header {
@@ -30,6 +31,10 @@ footer {
 .metricas {
     list-style: none;
     padding: 11px;
+    background-color: #212E36;
+    margin: 13px;
+    border-radius: 5px;
+    border-style:none;
 }
 
 textarea[name="user-input"]{
@@ -39,7 +44,7 @@ textarea[name="user-input"]{
     border: 1px solid #52A5E0;
     background-color: #212E36;
     min-height: 350px;
-    min-width: 350px;
+    min-width: 650px;
     color: #EFF3F5;
 }
 
@@ -50,14 +55,17 @@ textarea[name="user-input"]{
     color: aliceblue;
     cursor: pointer;
     padding: 7px 15px;
-    text-align: center;
     margin: 11px;
-    transition: box-shadow 0.3s;
+    transition: box-shadow 0.3s; 
+    margin-left: 675px;
 }
 
-/* .container{ 
-    display: grid;
-    justify-content: flex-start;
-    place-items: center;
-    margin: auto;
-} */
+div { 
+    display: flex;
+    align-items: center;
+    padding: 35px;
+}
+
+
+
+
