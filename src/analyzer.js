@@ -50,8 +50,32 @@ const analyzer = {
 
   getNumberSum: (text) => {
     //TODO: esta función debe retornar la suma de todos los números que se encuentran en el parámetro `text` de tipo `string`.
-    // let getNumbers = text.match(/\b\d+\b/g);
-    // const numbers = Number(getNumbers)
+    // obtener los números
+    // sumar los números 
+    // mostrar el resultado de la suma
+    // recorrer con un bucle 
+
+    let numbers = '';
+    let suma = 0;
+
+
+    for(let i=0; i < text.length; i++){
+      if(text[i] >= '0' && text[i] <= '9'){
+        numbers += text[i]
+      } else {
+        if(numbers !== ''){
+          suma += parseInt(numbers)
+          numbers = ''
+        }
+      }
+    }
+
+    if(numbers !== ''){
+      suma += parseInt(numbers)
+    }
+    
+    return suma;
+
 
 
 
