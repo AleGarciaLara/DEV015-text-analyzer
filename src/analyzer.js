@@ -69,7 +69,6 @@ const analyzer = {
         }
       }
     }
-    
     return suma;
 
 
