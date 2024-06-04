@@ -69,10 +69,6 @@ const analyzer = {
         }
       }
     }
-
-    if(numbers !== ''){
-      suma += parseInt(numbers)
-    }
     
     return suma;
 
