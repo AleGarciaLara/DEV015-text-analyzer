@@ -29,8 +29,8 @@ const analyzer = {
   },
   getNumberCount: (text) => {
     //TODO: esta función debe retornar cúantos números se encuentran en el parámetro `text` de tipo `string`.
-    //regEx para encontrar todos los números, incluyendo los que tienen punto decimal
-    const numbers = text.match((/[\d.]+/g));       
+    //regEx para encontrar todos los números, incluyendo los que tienen punto decimal   
+    const numbers = text.match(/\b\d+(\.\d+)?\b/g);  
     // Contar la cantidad de números encontrados // ? es una versión abreviada de if 
     //condición if valor si verdadero : valor si falso
     const count = numbers ? numbers.length : 0;
@@ -45,12 +45,16 @@ const analyzer = {
       if(text[i] >= '0' && text[i] <= '9' || text[i] === '.') {
         numbers += text[i];
       } else {
-        if(numbers !== '') {
+        if(numbers !== '' && (i === 0 || !(/[a-zA-Z]/.test(text[i-1]))) && (i === text.length - 1 || !(/[a-zA-Z]/.test(text[i+1])))) {
           suma += parseFloat(numbers.replace(/,/g, ''));
           numbers = '';
         }
       }
     }
+    if(numbers !== '' && (text.length === 0 || !(/[a-zA-Z]/.test(text[text.length-1])))) {
+      suma += parseFloat(numbers.replace(/,/g, ''));
+    }
+
     return suma;
   }
 };

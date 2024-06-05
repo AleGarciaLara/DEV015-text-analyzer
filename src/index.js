@@ -24,18 +24,18 @@ document.addEventListener('DOMContentLoaded', function(){
     showCharCount.textContent = `Caracteres: ${charCount}`;
     showCharNPCount.textContent = `Caracteres sin espacios ni signos de puntuación: ${charNSCount}`;
     showNumCount.textContent = `Números: ${numCount}`;
-    showNumSum.textContent = `Suma de números: ${numSum}`;
+    showNumSum.textContent = `Suma de números: ${numSum.toFixed(2)}`;
     showAvLength.textContent = `Longitud media de las palabras: ${avLength.toFixed(2)}`;
   }); 
 
   resetButton.addEventListener("click", function() {
     textarea.value = '';
-    showWordCount.textContent = `Palabras: 0`;
-    showCharCount.textContent = `Caracteres: 0`;
-    showCharNPCount.textContent = `Caracteres sin espacios ni signos de puntuación: 0`;
-    showNumCount.textContent = `Números: 0`;
-    showNumSum.textContent = `Suma de números: 0`;
-    showAvLength.textContent = `Longitud media de las palabras: 0`;
+    showWordCount.textContent = `Palabras: ${textarea.value = ''}`;
+    showCharCount.textContent = `Caracteres: ${textarea.value = ''}`;
+    showCharNPCount.textContent = `Caracteres sin espacios ni signos de puntuación: ${textarea.value = ''}`;
+    showNumCount.textContent = `Números: ${textarea.value = ''}`;
+    showNumSum.textContent = `Suma de números: ${textarea.value = ''}`;
+    showAvLength.textContent = `Longitud media de las palabras: ${textarea.value = ''}`;
   });
 
 });
