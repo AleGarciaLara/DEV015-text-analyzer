@@ -31,11 +31,19 @@ const analyzer = {
     //TODO: esta función debe retornar cúantos números se encuentran en el parámetro `text` de tipo `string`.
     //regEx para encontrar todos los números, incluyendo los que tienen punto decimal   
     const numbers = text.match(/\b\d+(\.\d+)?\b/g);  
-    // Contar la cantidad de números encontrados // ? es una versión abreviada de if 
-    //condición if valor si verdadero : valor si falso
-    const count = numbers ? numbers.length : 0;
+    let count = 0;
+  
+    if (numbers === null) {
+      count = 0;
+    } else {
+      if (numbers) {
+        count = numbers.length;
+      }
+    }
+
     return count;
   },
+
   getNumberSum: (text) => {
     //TODO: esta función debe retornar la suma de todos los números que se encuentran en el parámetro `text` de tipo `string`.
     let numbers = '';
@@ -58,7 +66,6 @@ const analyzer = {
     return suma;
   }
 };
-
 
 
 export default analyzer;
